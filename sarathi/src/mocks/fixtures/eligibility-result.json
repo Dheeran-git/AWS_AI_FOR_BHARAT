@@ -1,0 +1,212 @@
+{
+  "citizen_id": "mock-citizen-001",
+  "evaluation_timestamp": "2026-02-26T10:30:00Z",
+  "eligible_schemes": [
+    {
+      "scheme_id": "pm-awas-yojana",
+      "scheme_name": "Pradhan Mantri Awas Yojana (PMAY)",
+      "category": "Housing",
+      "benefit_value": 120000,
+      "benefit_type": "one-time",
+      "confidence": 0.94,
+      "eligibility_status": "eligible",
+      "explanation": {
+        "summary": "You qualify for a housing subsidy of ₹1.2 lakh for constructing a pucca house under PMAY.",
+        "criteria_matched": ["BPL household", "No existing pucca house", "Valid Aadhaar"],
+        "criteria_unmatched": [],
+        "missing_documents": []
+      },
+      "trust_score": {
+        "approval_probability": 0.89,
+        "estimated_processing_days": 45,
+        "community_success_rate": 0.82
+      },
+      "deadline": "2026-06-30T00:00:00Z",
+      "conflicts_with": []
+    },
+    {
+      "scheme_id": "pm-jan-dhan",
+      "scheme_name": "PM Jan Dhan Yojana",
+      "category": "Financial Inclusion",
+      "benefit_value": 10000,
+      "benefit_type": "one-time",
+      "confidence": 0.99,
+      "eligibility_status": "eligible",
+      "explanation": {
+        "summary": "Zero-balance bank account with ₹10,000 overdraft facility and accident insurance.",
+        "criteria_matched": ["No existing bank account", "Indian citizen"],
+        "criteria_unmatched": [],
+        "missing_documents": []
+      },
+      "trust_score": {
+        "approval_probability": 0.97,
+        "estimated_processing_days": 7,
+        "community_success_rate": 0.95
+      },
+      "conflicts_with": []
+    },
+    {
+      "scheme_id": "widow-pension",
+      "scheme_name": "National Family Benefit Scheme (Widow Pension)",
+      "category": "Pension",
+      "benefit_value": 18000,
+      "benefit_type": "recurring",
+      "confidence": 0.91,
+      "eligibility_status": "eligible",
+      "explanation": {
+        "summary": "Monthly pension of ₹1,500 for widows aged 40-79 from BPL households.",
+        "criteria_matched": ["Widow status", "BPL household", "Age 40-79"],
+        "criteria_unmatched": [],
+        "missing_documents": ["Death certificate of spouse"]
+      },
+      "trust_score": {
+        "approval_probability": 0.85,
+        "estimated_processing_days": 30,
+        "community_success_rate": 0.78
+      },
+      "conflicts_with": ["old-age-pension"]
+    },
+    {
+      "scheme_id": "old-age-pension",
+      "scheme_name": "Indira Gandhi National Old Age Pension (IGNOAP)",
+      "category": "Pension",
+      "benefit_value": 12000,
+      "benefit_type": "recurring",
+      "confidence": 0.76,
+      "eligibility_status": "eligible",
+      "explanation": {
+        "summary": "Monthly pension of ₹1,000 for BPL citizens aged 60+.",
+        "criteria_matched": ["BPL household"],
+        "criteria_unmatched": ["Age 60+ required (you are 54)"],
+        "missing_documents": ["Age proof document"]
+      },
+      "trust_score": {
+        "approval_probability": 0.62,
+        "estimated_processing_days": 45,
+        "community_success_rate": 0.71
+      },
+      "conflicts_with": ["widow-pension"]
+    },
+    {
+      "scheme_id": "pm-ujjwala",
+      "scheme_name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+      "category": "Energy",
+      "benefit_value": 16000,
+      "benefit_type": "one-time",
+      "confidence": 0.88,
+      "eligibility_status": "eligible",
+      "explanation": {
+        "summary": "Free LPG connection + ₹1,600 subsidy per refill for BPL households.",
+        "criteria_matched": ["BPL household", "No existing LPG connection", "Adult woman"],
+        "criteria_unmatched": [],
+        "missing_documents": []
+      },
+      "trust_score": {
+        "approval_probability": 0.91,
+        "estimated_processing_days": 14,
+        "community_success_rate": 0.88
+      },
+      "conflicts_with": []
+    },
+    {
+      "scheme_id": "ayushman-bharat",
+      "scheme_name": "Ayushman Bharat PM-JAY",
+      "category": "Health",
+      "benefit_value": 500000,
+      "benefit_type": "recurring",
+      "confidence": 0.96,
+      "eligibility_status": "eligible",
+      "explanation": {
+        "summary": "₹5 lakh annual health insurance for hospitalisation at empanelled hospitals.",
+        "criteria_matched": ["BPL household", "Listed in SECC database"],
+        "criteria_unmatched": [],
+        "missing_documents": []
+      },
+      "trust_score": {
+        "approval_probability": 0.93,
+        "estimated_processing_days": 10,
+        "community_success_rate": 0.87
+      },
+      "conflicts_with": []
+    },
+    {
+      "scheme_id": "scholarship-sc",
+      "scheme_name": "Post-Matric Scholarship for SC Students",
+      "category": "Education",
+      "benefit_value": 24000,
+      "benefit_type": "recurring",
+      "confidence": 0.83,
+      "eligibility_status": "needs_verification",
+      "explanation": {
+        "summary": "Annual scholarship for SC students enrolled in post-matric education.",
+        "criteria_matched": ["SC caste category", "BPL household"],
+        "criteria_unmatched": [],
+        "missing_documents": ["Caste certificate", "Enrollment proof from school/college"]
+      },
+      "trust_score": {
+        "approval_probability": 0.79,
+        "estimated_processing_days": 60,
+        "community_success_rate": 0.73
+      },
+      "conflicts_with": []
+    },
+    {
+      "scheme_id": "pds-ration",
+      "scheme_name": "Public Distribution System (PDS) — Ration",
+      "category": "Food Security",
+      "benefit_value": 36000,
+      "benefit_type": "recurring",
+      "confidence": 0.98,
+      "eligibility_status": "eligible",
+      "explanation": {
+        "summary": "35 kg of subsidised food grains per month under NFSA.",
+        "criteria_matched": ["NFSA-listed household", "BPL status"],
+        "criteria_unmatched": [],
+        "missing_documents": []
+      },
+      "trust_score": {
+        "approval_probability": 0.96,
+        "estimated_processing_days": 5,
+        "community_success_rate": 0.92
+      },
+      "conflicts_with": []
+    }
+  ],
+  "optimal_bundles": [
+    {
+      "bundle_id": "bundle-001",
+      "schemes": ["pm-awas-yojana", "pm-jan-dhan", "widow-pension", "pm-ujjwala", "ayushman-bharat", "pds-ration", "scholarship-sc"],
+      "total_value": 724000,
+      "coverage_breadth": 7,
+      "application_effort": "medium",
+      "combined_probability": 0.84,
+      "explanation": "Maximum coverage bundle: Choose Widow Pension over Old Age Pension (saves ₹6,000/year more) and get all non-conflicting benefits."
+    },
+    {
+      "bundle_id": "bundle-002",
+      "schemes": ["pm-awas-yojana", "pm-jan-dhan", "ayushman-bharat", "pds-ration", "pm-ujjwala"],
+      "total_value": 682000,
+      "coverage_breadth": 5,
+      "application_effort": "low",
+      "combined_probability": 0.91,
+      "explanation": "Quick-win bundle: Highest approval probability (91%), fewer documents needed, approved within 14 days."
+    },
+    {
+      "bundle_id": "bundle-003",
+      "schemes": ["pm-awas-yojana", "old-age-pension", "pm-jan-dhan", "ayushman-bharat", "pds-ration"],
+      "total_value": 678000,
+      "coverage_breadth": 5,
+      "application_effort": "low",
+      "combined_probability": 0.88,
+      "explanation": "Age-eligibility bundle: Valid if you are 60+. Excludes widow pension to avoid conflict."
+    }
+  ],
+  "conflicts_detected": [
+    {
+      "scheme_a": "widow-pension",
+      "scheme_b": "old-age-pension",
+      "conflict_type": "purpose_lock",
+      "explanation": "You can only receive one pension scheme. Widow Pension gives ₹1,500/month vs Old Age Pension ₹1,000/month — Widow Pension recommended."
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "panchayat_id": "UP-AGR-BAN-001",
+  "panchayat_name": "Banpur Gram Panchayat",
+  "generated_at": "2026-02-26T09:00:00Z",
+  "summary": {
+    "total_households": 1247,
+    "enrolled_households": 891,
+    "invisible_citizens": 47,
+    "pending_applications": 23,
+    "total_benefits_secured": 18400000
+  },
+  "alerts": [
+    {
+      "alert_id": "ALT-001",
+      "alert_type": "invisible_citizen",
+      "priority": "high",
+      "citizen_id": "CIT-0821",
+      "citizen_name": "Savitri Devi",
+      "details": "Widow household, 3 children, zero benefits enrolled for 847 days. Eligible for ₹95,000/year in welfare.",
+      "eligible_schemes": ["widow-pension", "ayushman-bharat", "pm-ujjwala", "pds-ration"],
+      "potential_benefit_value": 95000,
+      "action_required": "Immediate field visit for assisted registration",
+      "deadline": null
+    },
+    {
+      "alert_id": "ALT-002",
+      "alert_type": "life_event",
+      "priority": "high",
+      "citizen_id": "CIT-0345",
+      "citizen_name": "Ramesh Kumar",
+      "details": "Disability certificate issued last week — 4 new schemes triggered including disability pension and assistive device scheme.",
+      "eligible_schemes": ["disability-pension", "assistive-device", "ayushman-bharat"],
+      "potential_benefit_value": 72000,
+      "action_required": "Register disability and apply for schemes within 30 days",
+      "deadline": "2026-03-26T00:00:00Z"
+    },
+    {
+      "alert_id": "ALT-003",
+      "alert_type": "deadline",
+      "priority": "high",
+      "citizen_id": "CIT-0127",
+      "citizen_name": "Meena Kumari",
+      "details": "Scholarship enrollment window closes in 7 days. Daughter eligible for ₹24,000 annual scholarship.",
+      "eligible_schemes": ["scholarship-sc"],
+      "potential_benefit_value": 24000,
+      "action_required": "Submit scholarship application before March 4, 2026",
+      "deadline": "2026-03-04T00:00:00Z"
+    },
+    {
+      "alert_id": "ALT-004",
+      "alert_type": "newly_eligible",
+      "priority": "medium",
+      "citizen_id": "CIT-0593",
+      "citizen_name": "Bhanu Prasad",
+      "details": "Turned 60 last month — now eligible for Old Age Pension (₹1,000/month).",
+      "eligible_schemes": ["old-age-pension"],
+      "potential_benefit_value": 12000,
+      "action_required": "Assist with pension application",
+      "deadline": null
+    },
+    {
+      "alert_id": "ALT-005",
+      "alert_type": "newly_eligible",
+      "priority": "medium",
+      "citizen_id": "CIT-0712",
+      "citizen_name": "Sunita Singh",
+      "details": "Recent birth registration — eligible for maternity benefit and child nutrition scheme.",
+      "eligible_schemes": ["maternity-benefit", "poshan-abhiyan"],
+      "potential_benefit_value": 15000,
+      "action_required": "Register newborn and apply for maternity schemes",
+      "deadline": null
+    },
+    {
+      "alert_id": "ALT-006",
+      "alert_type": "invisible_citizen",
+      "priority": "low",
+      "citizen_id": "CIT-0981",
+      "citizen_name": "Hari Lal",
+      "details": "Migrant worker returned from Delhi — home state benefits need to be restored.",
+      "eligible_schemes": ["pds-ration", "pm-jan-dhan"],
+      "potential_benefit_value": 46000,
+      "action_required": "Update address and restore home state benefits",
+      "deadline": null
+    }
+  ],
+  "life_events": [
+    {
+      "event_id": "EVT-001",
+      "event_type": "Disability Certificate Issued",
+      "citizen_id": "CIT-0345",
+      "citizen_name": "Ramesh Kumar",
+      "event_date": "2026-02-20T00:00:00Z",
+      "triggered_schemes": ["disability-pension", "assistive-device", "ayushman-bharat"],
+      "outreach_status": "pending"
+    },
+    {
+      "event_id": "EVT-002",
+      "event_type": "Birth Registered",
+      "citizen_id": "CIT-0712",
+      "citizen_name": "Sunita Singh",
+      "event_date": "2026-02-18T00:00:00Z",
+      "triggered_schemes": ["maternity-benefit", "poshan-abhiyan"],
+      "outreach_status": "contacted"
+    },
+    {
+      "event_id": "EVT-003",
+      "event_type": "Death Registered",
+      "citizen_id": "CIT-0421",
+      "citizen_name": "Ganga Prasad",
+      "event_date": "2026-02-15T00:00:00Z",
+      "triggered_schemes": ["survivor-benefit"],
+      "outreach_status": "enrolled"
+    },
+    {
+      "event_id": "EVT-004",
+      "event_type": "Migration Reported",
+      "citizen_id": "CIT-0981",
+      "citizen_name": "Hari Lal",
+      "event_date": "2026-02-22T00:00:00Z",
+      "triggered_schemes": ["pds-ration", "pm-jan-dhan"],
+      "outreach_status": "pending"
+    }
+  ],
+  "performance": {
+    "delivery_success_rate": 78.4,
+    "average_processing_days": 32,
+    "citizen_satisfaction": 74.2,
+    "validation_rate": 68.9,
+    "performance_index": 78,
+    "district_rank": 3,
+    "state_rank": 47
+  },
+  "invisible_citizens": [
+    {
+      "citizen_id": "CIT-0821",
+      "name": "Savitri Devi",
+      "village": "Banpur",
+      "vulnerability_score": 94,
+      "eligible_schemes_count": 4,
+      "potential_benefit_value": 95000,
+      "outreach_status": "pending",
+      "zero_benefit_days": 847
+    },
+    {
+      "citizen_id": "CIT-0633",
+      "name": "Kiran Bai",
+      "village": "Rampur Tanda",
+      "vulnerability_score": 88,
+      "eligible_schemes_count": 6,
+      "potential_benefit_value": 87000,
+      "outreach_status": "contacted",
+      "zero_benefit_days": 612
+    },
+    {
+      "citizen_id": "CIT-0445",
+      "name": "Mohan Das",
+      "village": "Banpur",
+      "vulnerability_score": 82,
+      "eligible_schemes_count": 3,
+      "potential_benefit_value": 76000,
+      "outreach_status": "pending",
+      "zero_benefit_days": 523
+    },
+    {
+      "citizen_id": "CIT-0918",
+      "name": "Phulwati",
+      "village": "Naya Gaon",
+      "vulnerability_score": 79,
+      "eligible_schemes_count": 5,
+      "potential_benefit_value": 68000,
+      "outreach_status": "pending",
+      "zero_benefit_days": 445
+    },
+    {
+      "citizen_id": "CIT-0277",
+      "name": "Tulsi Ram",
+      "village": "Rampur Tanda",
+      "vulnerability_score": 71,
+      "eligible_schemes_count": 2,
+      "potential_benefit_value": 48000,
+      "outreach_status": "enrolled",
+      "zero_benefit_days": 312
+    }
+  ]
+}
