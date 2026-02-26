@@ -34,7 +34,7 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
       className={
         variant === 'landing'
           ? 'bg-[#1e3a5f] text-white sticky top-0 z-40 shadow-lg'
-          : 'bg-white border-b border-slate-100 sticky top-0 z-40 shadow-sm'
+          : 'bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700 sticky top-0 z-40 shadow-sm'
       }
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +46,7 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
             aria-label="Sarathi Home"
           >
             <img src="/sarathi-logo.svg" alt="" className="w-8 h-8" aria-hidden="true" />
-            <span className={variant === 'landing' ? 'text-white' : 'text-[#1e3a5f]'}>
+            <span className={variant === 'landing' ? 'text-white' : 'text-[#1e3a5f] dark:text-white'}>
               Sarathi
             </span>
           </Link>
@@ -60,7 +60,7 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
                 className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
                   variant === 'landing'
                     ? 'text-white/80 hover:text-white hover:bg-white/10'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700'
                 }`}
                 aria-label={t('common.language')}
                 aria-expanded={langOpen}
@@ -69,13 +69,13 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
                 <span>{INDIAN_LANGUAGES.find((l) => l.code === selectedLanguage)?.name.split(' ')[0] ?? 'EN'}</span>
               </button>
               {langOpen && (
-                <div className="absolute right-0 top-full mt-1 w-56 bg-white rounded-xl shadow-lg border border-slate-100 py-2 z-50">
+                <div className="absolute right-0 top-full mt-1 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700 py-2 z-50">
                   {INDIAN_LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => handleLangChange(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-50 transition-colors ${
-                        selectedLanguage === lang.code ? 'text-[#1e3a5f] font-semibold' : 'text-slate-700'
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors ${
+                        selectedLanguage === lang.code ? 'text-[#1e3a5f] dark:text-amber-400 font-semibold' : 'text-slate-700 dark:text-slate-200'
                       }`}
                     >
                       {lang.name}
@@ -91,7 +91,7 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
               className={`p-2 rounded-xl transition-colors ${
                 variant === 'landing'
                   ? 'text-white/80 hover:text-white hover:bg-white/10'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-700'
               }`}
               aria-label={t('common.darkMode')}
             >
@@ -101,7 +101,7 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
             {/* Auth actions */}
             {user ? (
               <div className="flex items-center gap-3">
-                <span className={`text-sm font-medium ${variant === 'landing' ? 'text-white/90' : 'text-slate-700'}`}>
+                <span className={`text-sm font-medium ${variant === 'landing' ? 'text-white/90' : 'text-slate-700 dark:text-slate-200'}`}>
                   {user.name}
                 </span>
                 <button
@@ -109,7 +109,7 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
                   className={`flex items-center gap-1.5 text-sm font-medium transition-colors ${
                     variant === 'landing'
                       ? 'text-white/80 hover:text-white'
-                      : 'text-slate-600 hover:text-slate-900'
+                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white'
                   }`}
                   aria-label={t('nav.logout')}
                 >
@@ -148,6 +148,13 @@ export function Navbar({ variant = 'landing' }: NavbarProps) {
           <Button variant="accent" size="sm" className="w-full" onClick={() => { navigate('/login'); setMobileOpen(false) }}>
             {t('nav.checkEligibility')}
           </Button>
+          <button
+            onClick={toggleDarkMode}
+            className="w-full flex items-center justify-center gap-2 text-white/80 hover:text-white text-sm py-2"
+          >
+            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {darkMode ? 'Light Mode' : 'Dark Mode'}
+          </button>
           {user && (
             <button onClick={handleLogout} className="w-full text-center text-white/80 text-sm py-2">
               {t('nav.logout')}

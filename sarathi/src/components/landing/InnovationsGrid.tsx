@@ -73,16 +73,16 @@ export function InnovationsGrid() {
   const { t } = useTranslation()
 
   return (
-    <section className="py-20 bg-slate-50" aria-labelledby="innovations-title">
+    <section className="py-20 bg-slate-50 dark:bg-slate-800" aria-labelledby="innovations-title">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2
             id="innovations-title"
-            className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4"
+            className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4"
           >
             {t('landing.innovationsTitle')}
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             First-of-kind features that transform welfare delivery from reactive to proactive.
           </p>
         </div>
@@ -95,15 +95,15 @@ export function InnovationsGrid() {
               className={`bg-gradient-to-br ${gradient} border-0 p-5`}
             >
               <div className="flex items-start justify-between mb-4">
-                <div className={`p-2.5 bg-white rounded-xl shadow-sm ${iconColor}`}>
+                <div className={`p-2.5 bg-white dark:bg-slate-700 rounded-xl shadow-sm ${iconColor}`}>
                   <Icon className="w-5 h-5" aria-hidden="true" />
                 </div>
-                <span className="text-xs font-semibold bg-[#1e3a5f]/10 text-[#1e3a5f] px-2 py-0.5 rounded-full">
+                <span className="text-xs font-semibold bg-[#1e3a5f]/10 dark:bg-white/10 text-[#1e3a5f] dark:text-white px-2 py-0.5 rounded-full">
                   {badge}
                 </span>
               </div>
-              <h3 className="font-semibold text-slate-900 mb-2 text-sm leading-snug">{t(titleKey)}</h3>
-              <p className="text-slate-600 text-xs leading-relaxed">{t(descKey)}</p>
+              <h3 className="font-semibold text-slate-900 dark:text-slate-100 mb-2 text-sm leading-snug">{t(titleKey)}</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">{t(descKey)}</p>
             </Card>
           ))}
         </div>
