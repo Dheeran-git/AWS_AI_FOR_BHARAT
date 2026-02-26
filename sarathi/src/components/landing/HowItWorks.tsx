@@ -7,21 +7,21 @@ const steps = [
     icon: Mic,
     titleKey: 'landing.step1',
     descKey: 'landing.step1Desc',
-    color: 'bg-blue-100 text-blue-600',
+    color: 'bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400',
   },
   {
     step: 2,
     icon: Search,
     titleKey: 'landing.step2',
     descKey: 'landing.step2Desc',
-    color: 'bg-amber-100 text-amber-600',
+    color: 'bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400',
   },
   {
     step: 3,
     icon: CheckCircle2,
     titleKey: 'landing.step3',
     descKey: 'landing.step3Desc',
-    color: 'bg-emerald-100 text-emerald-600',
+    color: 'bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400',
   },
 ]
 
@@ -29,16 +29,16 @@ export function HowItWorks() {
   const { t } = useTranslation()
 
   return (
-    <section className="py-20 bg-white" aria-labelledby="how-it-works-title">
+    <section className="py-20 bg-white dark:bg-slate-900" aria-labelledby="how-it-works-title">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
           <h2
             id="how-it-works-title"
-            className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4"
+            className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-slate-100 mb-4"
           >
             {t('landing.howItWorksTitle')}
           </h2>
-          <p className="text-slate-500 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-slate-400 text-lg max-w-2xl mx-auto">
             Simple, guided, and available in your language — even without literacy.
           </p>
         </div>
@@ -46,7 +46,7 @@ export function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Connector line (desktop) */}
           <div
-            className="hidden md:block absolute top-10 left-1/3 right-1/3 h-0.5 bg-slate-200"
+            className="hidden md:block absolute top-10 left-1/3 right-1/3 h-0.5 bg-slate-200 dark:bg-slate-700"
             aria-hidden="true"
           />
 
@@ -67,8 +67,8 @@ export function HowItWorks() {
                   {step}
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-2">{t(titleKey)}</h3>
-              <p className="text-slate-500 text-base leading-relaxed max-w-xs">{t(descKey)}</p>
+              <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">{t(titleKey)}</h3>
+              <p className="text-slate-500 dark:text-slate-400 text-base leading-relaxed max-w-xs">{t(descKey)}</p>
             </div>
           ))}
         </div>

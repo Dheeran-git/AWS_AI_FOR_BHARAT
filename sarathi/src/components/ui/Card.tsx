@@ -7,13 +7,13 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const variantClasses: Record<CardVariant, string> = {
-  default: 'bg-white rounded-2xl border border-slate-100',
-  elevated: 'bg-white rounded-2xl shadow-md border border-slate-100',
-  bordered: 'bg-white rounded-2xl border-2 border-slate-200',
+  default: 'bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700',
+  elevated: 'bg-white dark:bg-slate-800 rounded-2xl shadow-md border border-slate-100 dark:border-slate-700',
+  bordered: 'bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-200 dark:border-slate-700',
   interactive:
-    'bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 cursor-pointer',
+    'bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 cursor-pointer',
   accent:
-    'bg-white rounded-2xl border-2 border-[#f59e0b] shadow-md',
+    'bg-white dark:bg-slate-800 rounded-2xl border-2 border-[#f59e0b] shadow-md',
 }
 
 export function Card({ variant = 'default', className, children, ...props }: CardProps) {
@@ -34,7 +34,7 @@ export function CardHeader({ className, children, ...props }: React.HTMLAttribut
 
 export function CardTitle({ className, children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
-    <h3 className={cn('text-lg font-semibold text-slate-800', className)} {...props}>
+    <h3 className={cn('text-lg font-semibold text-slate-800 dark:text-slate-100', className)} {...props}>
       {children}
     </h3>
   )

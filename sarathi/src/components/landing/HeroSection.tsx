@@ -79,8 +79,8 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Wave divider */}
-      <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
+      {/* Wave divider — hidden in dark mode as the hardcoded fill colour doesn't match */}
+      <div className="absolute bottom-0 left-0 right-0 dark:hidden" aria-hidden="true">
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
           <path d="M0 60L1440 0V60H0Z" fill="#f8fafc" />
         </svg>
